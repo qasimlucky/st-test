@@ -45,7 +45,7 @@ function Header() {
                                     </li>
                                     <li><a href=""><i class="fa fa-search nav-icons"></i></a></li>
                                     <li><a href=""><i class="fa fa-bell-o nav-icons"></i></a></li>
-                                    <a href=""><img class="profile" src="web-assets/img/user-icon 1.png" alt="profile img"/></a>
+                                    <a href=""><img class="profile" src="https://static.xx.fbcdn.net/assets/?revision=816167972411634&name=desktop-creating-an-account-icon&density=1" alt="profile img"/></a>
                                 </ul>
                             </div>
                         </div>
