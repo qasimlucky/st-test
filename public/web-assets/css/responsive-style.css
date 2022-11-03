@@ -1,0 +1,279 @@
+
+/* HEADER RESPONSIVE SECTION STARTS  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media only screen and (min-width: 955px) and (max-width :5000px){.desktop-menu{display: block;}.mobile-menu-row{
+    display: none !important;
+}}
+@media only screen and (min-width: 280px) and (max-width: 954px){.desktop-menu{display: none;}.mobile-menu-row{
+    display: block;
+}}
+@media only screen and (min-width: 1051px)  and (max-width: 1199px){
+    .custom-container {
+        width: 94%;
+        height: 100%;
+        margin: auto;
+        
+    }
+    .header-row {
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    .header-col{
+        float: left;
+        margin: auto;
+        position: relative;
+    }
+    .col-lg-3 {
+        width: 20%;
+        height: 100%;
+        
+    }
+    .img-fluid {
+        width: 90%;
+        height: 50px;
+        border-radius: 12%;
+    }
+    .header-right ul li {
+        display: inline-block;
+        margin-right: 2px !important;
+        vertical-align: middle;
+       
+    }
+    .col-lg-6 {
+        width: 55%;
+        height: 100%;
+        
+    }
+}
+@media only screen and (min-width: 955px)  and (max-width: 1050px){
+    .custom-container {
+        width: 94%;
+        height: 100%;
+        margin: auto;
+        
+    }
+    .header-row {
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+        
+        width: 100%;
+        margin: auto;
+        display: flex;
+    }
+    .header-col{
+        float: left;
+        margin: auto;
+        position: relative;
+        padding: 0;
+    }
+    .col-lg-3 {
+        width: 22%;
+        height: 100%;
+        
+    }
+    .img-fluid {
+        width: 78%;
+        height: 50px;
+        border-radius: 12%;
+    }
+    .header-right ul li {
+        display: inline-block;
+        margin-right: 2px !important;
+        vertical-align: middle;
+       
+    }
+    .col-lg-6 {
+        width: 55%;
+        height: 100%;
+        
+    }
+    .main-menu ul{
+        padding: 0;
+    }
+    .main-menu ul li{
+        margin: 0 10px !important;
+    }
+}
+@media only screen and (min-width: 280px)  and (max-width:500px){
+    .mobile-menu-row{
+        display: flex;
+    }
+    .header-col{
+        float: left;
+        position: relative;
+        margin: auto;
+    }
+    .custom-container{
+        width: 98%;
+    }
+    .col-lg-3 {
+        width: 20%;
+        padding: 0;
+    }
+    .social-icons{
+        
+        width: 65%;
+    }
+    .col-lg-6 {
+        width: 10%;
+        height: 100%;
+        padding: 0;
+    }
+    .img-fluid {
+        width: 100% !important;
+        height: 34px;
+        border-radius: 0;
+    }
+    .header-right.header-right-2 {
+        padding: 2% 0;
+    }
+    .header-right ul li {
+        display: inline-block;
+        margin-right: 5px !important;
+        vertical-align: middle;
+    }
+}
+@media only screen and (min-width: 501px)  and (max-width: 954px){
+    .mobile-menu-row{
+        display: flex;
+    }
+    .header-col{
+        float: left;
+        position: relative;
+        margin: auto;
+    }
+    .custom-container{
+        width: 91%;
+    }
+    .col-lg-3 {
+        width: 25%;
+        padding: 0;
+    }
+    .social-icons{
+        
+        width: 60%;
+    }
+    .col-lg-6 {
+        width: 10%;
+        height: 100%;
+        /* padding: 0; */
+    }
+    .img-fluid {
+        width: 100% !important;
+        height: 34px;
+        border-radius: 0;
+    }
+    .header-right.header-right-2 {
+        padding: 2% 0;
+        text-align: right;
+    }
+    .header-right ul li {
+        display: inline-block;
+        margin-right: 5px !important;
+        vertical-align: middle;
+    }
+}
+@media only screen and (min-width: 501px)  and (max-width:809px){
+    .img-fluid{
+        height: 50px;
+    }}
+@media only screen and (min-width: 810px)  and (max-width: 954px){
+    .img-fluid{
+        height: 50px;
+        padding: 0 10%;
+    }}
+
+/* HEADER RESPONSIVE SECTION ENDS  ======================================================================*/
+
+/* FOOTER RESPONSIVE SECTION STARTS  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media only screen and (min-width: 500px)  and (max-width: 991px){
+    .footer-widget-section{
+        height:auto;
+    }
+    .section-padding{
+        margin-top: 0;
+    }
+    .container-footer{
+        padding: 4% 0 4% 0;
+    }
+    .footer-row{
+        height: 100%;
+    }
+    .row.footer-row {
+        display: block;
+        position: relative;
+        margin: auto;
+        width: 100%;
+       
+    }
+    .footer-widget.footer-col {
+        width: 50%;
+        margin: 0%;
+        float: left;
+    
+        /* display: block; */
+        position: relative;
+    }
+}
+@media only screen and (min-width: 500px)  and (max-width: 700px){
+    .container-footer{
+        padding: 8% 0 11% 0;
+    }
+}
+@media only screen and (min-width: 280px)  and (max-width: 701px){
+    .copyright-wrapper {
+        width: 79%;
+        display: block;
+        margin: auto;
+        position: relative;
+        color: #9b9bbf;
+        font-size: small;
+    
+    }
+    .copyright-text {
+        width: 98%;
+        float: left;
+        margin: auto;
+        text-align: center !important;
+        
+    }
+}
+@media only screen and (min-width: 280px)  and (max-width: 499px){
+    .footer-widget-section{
+        height:auto;
+    }
+    .section-padding{
+        margin-top: 0;
+    }
+    .container-footer{
+        padding: 10% 0 14% 0;
+    }
+    .footer-row{
+        height: 100%;
+    }
+    .row.footer-row {
+        display: block;
+        position: relative;
+        margin: auto;
+        width: 100%;
+       
+    }
+    .footer-widget.footer-col {
+        width: 100%;
+        margin: 0%;
+        float: left;
+    
+        /* display: block; */
+        position: relative;
+    }
+}
+
+
+/* FOOTER RESPONSIVE SECTION ENDS  ========================================================================*/
