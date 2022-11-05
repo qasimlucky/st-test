@@ -18,6 +18,7 @@ import LandingPage from './containers/website/landing-page';
 import TestList from './containers/website/test';
 import HomePage from './containers/website/home';
 import SignIn from './containers/website/sign-in';
+import SignUpOtp from './containers/website/signup-otp';
 
 
 
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/signup" exact element={<SignUp/>}/>
                 <Route path="/userprofile" exact element={<UserPerfile/>}/>
                 <Route path="/test" exact element={<TestList/>}/>
+                <Route path="/signupotp" exact element={<SignUpOtp/>}/>
             </Routes> 
 
             <Routes>
