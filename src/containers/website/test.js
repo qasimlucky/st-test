@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import {data} from "../../mockData"
  import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
@@ -44,4 +44,4 @@ function TestList() {
       }
 
 
-export default TestList;
+export default TestList; */
