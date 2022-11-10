@@ -45,3 +45,4 @@ function TestList() {
 
 
 export default TestList; */
+/* "proxy": "http://localhost:7000", */
