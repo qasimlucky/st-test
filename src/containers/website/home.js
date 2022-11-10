@@ -1,5 +1,9 @@
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import axios from "axios";
+
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
 import Header from "../../components/website/header";
 import WebFooter from "../../components/website/footer"; 
@@ -8,9 +12,39 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {data} from "../../mockData"
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
-function HomePage() {
-    const [isShown, setIsShown] = useState(false);
+import HomePopUp from './home-page-popup';
 
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+function HomePage() {
+   
+   
+    let subtitle;
+    const [modalIsOpen, setIsOpen] = React.useState(false)
+    const [isShown, setIsShown] = useState(true);
+    const [dbdata, setData] = useState([])
+    useEffect(() => {
+      axios
+        .get("/movie/get")
+        .then(Response =>{
+        setData(Response.data)
+        console.log(data)  
+      })
+    .catch(err =>{
+        console.log(err)
+      })
+      
+    },[]);
+ 
     const slideLeft = () => {
         var slider = document.getElementById('slider');
         slider.scrollLeft = slider.scrollLeft - 500;
@@ -68,12 +102,279 @@ function HomePage() {
         var slider7 = document.getElementById('slider7');
         slider7.scrollLeft = slider7.scrollLeft + 500
       };
+
+      function openModal() {
+        setIsOpen(true);
+        setIsShown(false)
+        
+      }
+    
+      function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#f00';
+      }
+    
+      function closeModal() {
+        setIsOpen(false);
+        setIsShown(true)
+      }
   
          return (  
                   <>
-    <Header/>
+                  <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        class="modal-class"
+      >
+        {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
+        {/* <button onClick={closeModal}>close</button> */}
+        <main class="home-popup web-bg-color">
+                <container class="home-popup-box">
+                    <section class="home-popup-s1">
+                        <div class="home-popup-s1-p1">
+                            <iframe src="https://www.youtube.com/watch?v=SxTYjptEzZs"></iframe>
+                        </div>
+                    </section>
+
+                    <section class="home-popup-s2-row" >
+                        <container class="home-popup-s2-col home-popup-s2-p1">
+                            <img src="https://i.pinimg.com/236x/c1/2b/d7/c12bd72009000fa249ee4260b2b9b4c5--english-movies-hollywood.jpg"></img>
+                        </container>
+
+                        <container class="home-popup-s2-col home-popup-s2-p2">
+
+                            <div class="popup-s2-btn-row">
+                                <a class="popup-s2-btn-col">Crime</a>
+                                <a class="popup-s2-btn-col">Drama</a>
+                                <a class="popup-s2-btn-col">Mystery</a>
+                            </div>
+
+                            <div class="popup-s2-movie-title">
+                                <h1>The Marshal King</h1>
+                            </div>
+
+                            <div class="popup-s2-rait-row rait-star">
+                                <a class="popup-s2-rait-col imbd">IMDB</a>
+                                <h5 class="popup-s2-rait-col points">8.5</h5>
+                                <div class="popup-s2-rait-col stars">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star grey" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <div class="popup-s2-rait-row time-movie">
+                                <div class="popup-s2-rait-col age"><a>18+</a></div>
+                                <div class="popup-s2-rait-col movie-time">2h 12m </div>
+                                <div class="popup-s2-rait-col quality"><a>HD</a></div>
+                                <div class="popup-s2-rait-col year">2022</div>
+                            </div>
+
+                            <div class="popup-s2-rait-row add-favrt">
+                                <div class="popup-s2-rait-col squre-dil"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                                <div class="popup-s2-rait-col favourite"><h5>Add to Favourites</h5></div>
+                            </div>
+
+                            <div class="popup-s2-rait-row-content" >
+                                <h5>Lorem ipsum dilorr ammet, consectur adispgn ddeit, sed it ells, tempor me so widll addcteid him form us </h5>
+                            </div>
+
+                        </container>
+
+                        <container class="home-popup-s2-col home-popup-s2-p3">
+                            <div><p>Cast, Mark King, Williamson, Kate, Wmma Robert Eiza Gonz, More</p></div><br></br>
+                            <div><p>Cast, Mark King, Williamson, Kate, Wmma Robert Eiza Gonz, More</p></div><br></br>
+                            <div><p>Cast, Mark King, Williamson, Kate, Wmma Robert Eiza Gonz, More</p></div><br></br>
+                        </container>
+
+                    </section>
+
+                    <section class="box-shadow-top">
+                        
+                            <div style={{paddingTop:"25px", backgroundColor:"#0d0d31"}}>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
+                            <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft2} size={40} /></span>
+                            <div
+                            id='slider2'
+                            className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
+                            style={{padding:"13px 0"}}>
+                            {data.map((item) => (
+                                <div class="container  inline-block p-2 hover:scale-105 ease-in-out duration-300" style={{ width:"200px"}}>
+                                <img
+                                className='list-images inline-block hover:scale-105 ease-in-out duration-300'
+                                src={item.img}
+                                alt='/'
+                                />
+                                <div class="overlay">
+                                <div class="overlay-box">
+                                                        <div class="overlay-parts overlay-part1">
+                                                            <h4>Boop Bitty</h4>
+                                                            <div class="part1-1">
+                                                                <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
+                                                            </div>
+                                                            <div class="part1-2 slide_right">
+                                                                <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="overlay-parts overlay-part2">
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-plus"></i></a></div>
+                                                        </div>
+                                                    </div>
+                                
+                                </div>
+                            </div>
+                                
+                            ))}
+                            </div >
+                            <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight2} size={40}  /></span>
+                            </div> 
+                            </div> 
+                            <div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
+                            <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft6} size={40} /></span>
+                            <div
+                            id='slider6'
+                            className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
+                            style={{padding:"13px 0"}}>
+                            {data.map((item) => (
+                                <div class="container  inline-block p-2 hover:scale-105 ease-in-out duration-300" style={{ width:"200px"}}>
+                                <img
+                                className='list-images inline-block hover:scale-105 ease-in-out duration-300'
+                                src={item.img}
+                                alt='/'
+                                />
+                                <div class="overlay">
+                                <div class="overlay-box">
+                                                        <div class="overlay-parts overlay-part1">
+                                                            <h4>Boop Bitty</h4>
+                                                            <div class="part1-1">
+                                                                <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
+                                                            </div>
+                                                            <div class="part1-2 slide_right">
+                                                                <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="overlay-parts overlay-part2">
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-plus"></i></a></div>
+                                                        </div>
+                                                    </div>
+                                
+                                </div>
+                            </div>
+                                
+                            ))}
+                            </div >
+                            <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight6} size={40}  /></span>
+                            </div> 
+                            </div> 
+                            <div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
+                            <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft5} size={40} /></span>
+                            <div
+                            id='slider5'
+                            className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
+                            style={{padding:"13px 0"}}>
+                            {data.map((item) => (
+                                <div class="container  inline-block p-2 hover:scale-105 ease-in-out duration-300" style={{ width:"200px"}}>
+                                <img
+                                className='list-images inline-block hover:scale-105 ease-in-out duration-300'
+                                src={item.img}
+                                alt='/'
+                                />
+                                <div class="overlay">
+                                <div class="overlay-box">
+                                                        <div class="overlay-parts overlay-part1">
+                                                            <h4>Boop Bitty</h4>
+                                                            <div class="part1-1">
+                                                                <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
+                                                            </div>
+                                                            <div class="part1-2 slide_right">
+                                                                <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="overlay-parts overlay-part2">
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-plus"></i></a></div>
+                                                        </div>
+                                                    </div>
+                                
+                                </div>
+                            </div>
+                                
+                            ))}
+                            </div >
+                            <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight5} size={40}  /></span>
+                            </div> 
+                            </div> 
+                            <div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
+                            <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft4} size={40} /></span>
+                            <div
+                            id='slider4'
+                            className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
+                            style={{padding:"13px 0"}}>
+                            {data.map((item) => (
+                                <div class="container  inline-block p-2 hover:scale-105 ease-in-out duration-300" style={{ width:"200px"}}>
+                                <img
+                                className='list-images inline-block hover:scale-105 ease-in-out duration-300'
+                                src={item.img}
+                                alt='/'
+                                />
+                                <div class="overlay">
+                                <div class="overlay-box">
+                                                        <div class="overlay-parts overlay-part1">
+                                                            <h4>Boop Bitty</h4>
+                                                            <div class="part1-1">
+                                                                <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
+                                                            </div>
+                                                            <div class="part1-2 slide_right">
+                                                                <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="overlay-parts overlay-part2">
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                                                            <div class="part2-1"><a href=""><i class="fa-solid fa-plus"></i></a></div>
+                                                        </div>
+                                                    </div>
+                                
+                                </div>
+                            </div>
+                                
+                            ))}
+                            </div >
+                            <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight4} size={40}  /></span>
+                            </div> 
+                            </div> 
+                        
+                    </section>
+                </container>
+            </main>
+        
+      </Modal> 
+      
+      {isShown && (<Header/>)}
+    
+    
     
     <div class="fullwidth-slider">
+    <div>
+      {/* <button onClick={openModal}>Open Modal</button> */}
+      
+    </div>
             <div id="headerslider" class="carousel slide"> 
                 
                 <div class="carousel-inner" role="listbox">
@@ -92,7 +393,7 @@ function HomePage() {
                                                 </p>
                                             </div>
                                             <div class="slide_right" data-animation="animated bounceInRight">
-                                                <a href="javascript:;" class="btn-trailer">Play Now</a> <a href="javascript:;" class="btn-detail">More details</a>
+                                                <a href="javascript:;" class="btn-trailer" onClick={openModal}>Play Now</a> <a href="javascript:;" class="btn-detail">More details</a>
                                             </div>
                                             <div class="watch-trailer">
                                                 <a href=""><img src="web-assets/img/play (1).png" alt=""/> </a> &nbsp; &nbsp; Watch Trailer
@@ -170,7 +471,7 @@ function HomePage() {
          <div style={{paddingTop:"25px", backgroundColor:"#0d0d31"}}>
         <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
          <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
-        <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100  text-[#FFFFFF]' onClick={slideLeft7} size={40} />
+        <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft7} size={40} /></span>
         <div
           id='slider7'
           className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
@@ -190,7 +491,7 @@ function HomePage() {
                                               <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
                                           </div>
                                           <div class="part1-2 slide_right">
-                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" onClick={openModal} class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
                                           </div>
                                       </div>
                                       <div class="overlay-parts overlay-part2">
@@ -205,13 +506,13 @@ function HomePage() {
             
           ))}
         </div >
-        <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 text-[#FFFFFF] ' onClick={slideRight7} size={40}  />
+        <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight7} size={40}  /></span>
       </div> 
         </div> 
         <div>
         <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
          <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
-        <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100  text-[#FFFFFF]' onClick={slideLeft6} size={40} />
+         <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft6} size={40} /></span>
         <div
           id='slider6'
           className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
@@ -231,7 +532,7 @@ function HomePage() {
                                               <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
                                           </div>
                                           <div class="part1-2 slide_right">
-                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                              <a onClick={openModal} class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
                                           </div>
                                       </div>
                                       <div class="overlay-parts overlay-part2">
@@ -246,13 +547,13 @@ function HomePage() {
             
           ))}
         </div >
-        <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 text-[#FFFFFF] ' onClick={slideRight6} size={40}  />
+        <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight6} size={40}  /></span>
       </div> 
         </div> 
         <div>
         <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
          <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
-        <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100  text-[#FFFFFF]' onClick={slideLeft5} size={40} />
+         <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft5} size={40} /></span>
         <div
           id='slider5'
           className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
@@ -272,7 +573,7 @@ function HomePage() {
                                               <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
                                           </div>
                                           <div class="part1-2 slide_right">
-                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" onClick={openModal} class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
                                           </div>
                                       </div>
                                       <div class="overlay-parts overlay-part2">
@@ -287,13 +588,13 @@ function HomePage() {
             
           ))}
         </div >
-        <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 text-[#FFFFFF] ' onClick={slideRight5} size={40}  />
+        <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight5} size={40}  /></span>
       </div> 
         </div> 
         <div>
         <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
          <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
-        <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100  text-[#FFFFFF]' onClick={slideLeft4} size={40} />
+         <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft4} size={40} /></span>
         <div
           id='slider4'
           className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
@@ -313,7 +614,7 @@ function HomePage() {
                                               <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
                                           </div>
                                           <div class="part1-2 slide_right">
-                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" onClick={openModal} class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
                                           </div>
                                       </div>
                                       <div class="overlay-parts overlay-part2">
@@ -328,7 +629,7 @@ function HomePage() {
             
           ))}
         </div >
-        <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 text-[#FFFFFF] ' onClick={slideRight4} size={40}  />
+        <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight4} size={40}  /></span>
       </div> 
         </div> 
          
@@ -508,7 +809,7 @@ function HomePage() {
         <div>
         <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
          <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
-        <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100  text-[#FFFFFF]' onClick={slideLeft3} size={40} />
+         <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft3} size={40} /></span>
         <div
           id='slider3'
           className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'
@@ -528,7 +829,7 @@ function HomePage() {
                                               <span class="movie-about views">16+</span><span class="movie-about">2h 40m</span>
                                           </div>
                                           <div class="part1-2 slide_right">
-                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
+                                              <a href="https://www.youtube.com/watch?v=zJgHbifIx-Q" onClick={openModal} class="btn-trailer"><i class="fa-solid fa-play"></i> Play Now</a>
                                           </div>
                                       </div>
                                       <div class="overlay-parts overlay-part2">
@@ -543,12 +844,13 @@ function HomePage() {
             
           ))}
         </div >
-        <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 text-[#FFFFFF] ' onClick={slideRight3} size={40}  />
+        <span class="show-arrow"><MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight3} size={40}  /></span>
       </div> 
         </div>     
             
        
-      <WebFooter/>    
+       
+      {isShown && (<WebFooter/>)}   
                   </>
         
          );

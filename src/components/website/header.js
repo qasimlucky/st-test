@@ -45,7 +45,21 @@ function Header() {
                                     </li>
                                     <li><a href=""><i class="fa fa-search nav-icons"></i></a></li>
                                     <li><a href=""><i class="fa fa-bell-o nav-icons"></i></a></li>
-                                    <a href=""><img class="profile" src="https://static.xx.fbcdn.net/assets/?revision=816167972411634&name=desktop-creating-an-account-icon&density=1" alt="profile img"/></a>
+
+                                    <li class="profile-dp">
+                                        <a href="">
+                                            <img class="profile" src="https://static.xx.fbcdn.net/assets/?revision=816167972411634&name=desktop-creating-an-account-icon&density=1" alt="profile img"/>
+                                        </a>
+
+                                        <div class="stv-profile-dropdown">
+                                            <div class="stv-profile-dropdown-box">
+                                                <div class="stv-profile-dropdown-item"><a href="http://localhost:3000/userprofile">My Profile</a></div>
+                                                <div class="stv-profile-dropdown-item stv-pf-d-p1"><a href="http://localhost:3000/pricingplan"><i></i>Pricing Plan</a></div>
+                                                <div class="stv-profile-dropdown-item"><a href=""><i></i>Logout</a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>

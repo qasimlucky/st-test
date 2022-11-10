@@ -18,7 +18,7 @@ function LandingPage() {
                             <h6 class="tag-line font-family-sans whitesmoke">World's Best</h6>
                             <div class="sm-heading"><h3>MOVIES OF THIS SEASON</h3></div>
                             <div class="slide_right" data-animation="animated bounceInRight">
-                                <Link to="/signin" class="btn-trailer bg-whitesmoke pink bd-whitesmoke">SIGN IN</Link> <Link to="/signup" class="btn-detail">SIGN UP</Link>
+                                <Link to="/signin" class="btn-trailer bg-whitesmoke pink bd-whitesmoke">SIGN IN</Link> <Link to="/signup-otp" class="btn-detail">SIGN UP</Link>
                             </div>
                         </div>
                         <div  class="landing-container-col stv-land-slider-main">
@@ -70,7 +70,7 @@ function LandingPage() {
                 <div class = "web-bg-color sec-2-main">
                     <div class="landing-sec-2">
                         <div class="landing-sec-2-row">
-                            <div class="sec-2-img-container stv-land-col" style={{backgroundImage:`url("web-assets/img/img-ii.png")`,backgroundSize:"cover"}}>
+                            <div class="sec-2-img-container stv-land-col" style={{backgroundImage:`url("https://www.maxicaster.com/sites/default/files/2022-06/1111.png")`,backgroundSize:"cover"}}>
                                 {/* <img class="sec-2-img" src="https://media.istockphoto.com/photos/three-smartphones-with-blank-white-screen-picture-id1137069935?k=20&m=1137069935&s=612x612&w=0&h=AtuFIIRH8NSQLe8_NG7dNI0BxJlldQvvnmdcpZXCUzY=" alt= "image"></img> */}
                             </div>
                             <div class="sec-2-content stv-land-col">
@@ -85,7 +85,7 @@ function LandingPage() {
                 {/* LANDING PAGE 3 THIRD SECTION STARTS ++++++++++++++++++++++++++++++++++++++++++++++++ */}
 
                 <div style = {{height: "500px",padding:"2% 0"}}>
-                    <div style={{ textAlign: "center", width:"80%", height : "20%", margin:"auto"}}>
+                    <div style={{ textAlign: "center", width:"80%", height : "20%", margin:"auto",paddingBottom:"9%"}}>
                         <h1 style={{color : "white", fontSize:"40px",fontFamily:'sans-serif',fontWeight:"bold"}}>What's New on SaloMTV</h1>
                     </div>
                     <div style ={{  display:"flex", width :"80%",height:"45%",  margin :"auto",   position: "relative" }}>
@@ -123,7 +123,7 @@ function LandingPage() {
                         </div>
                     </div>
 
-                    <div style={{ margin: "auto" , width : "80%", height : "20%", marginTop:"3%"}}>
+                    <div style={{ margin: "auto" , width : "80%", height : "20%", marginTop:"5%"}}>
                         <div style={{ margin: "auto" , width : "60%", textAlign:"center"}}>
                             <button class= "btn btn-lg  " style={{  padding: "8px 45px",fontFamily:'sans-serif',backgroundColor:"#D51C58", borderRadius:"20px",fontSize:"medium",fontWeight:"bold", color:"whitesmoke" }}>Subscribe Now*</button>
                             <p style={{fontFamily:'sans-serif', paddingTop:"40px",color:"whitesmoke",fontSize:"small"}}>* Terms and Conditions Apply | $7.99 a month or $69.90 a year </p>
@@ -142,7 +142,7 @@ function LandingPage() {
                                 <h1>Watch Anywhere You Want. </h1>
                                 <p>Watch an endless number of shows, on your phone, tablet, laptop and TV. </p>
                             </div>
-                            <div class="sec-2-img-container stv-land-col" style={{backgroundImage:`url("web-assets/img/img-ii.png")`,backgroundSize:"cover"}}>
+                            <div class="sec-2-img-container stv-land-col" style={{backgroundImage:`url("https://www.maxicaster.com/sites/default/files/2022-06/1111.png")`,backgroundSize:"cover"}}>
                                 {/* <img class="sec-2-img" src="web-assets/img/img-ii.png" alt= "image"></img> */}
                             </div>
                         </div>
@@ -153,9 +153,9 @@ function LandingPage() {
                     
                     {/* </div> */}
                         {/* New Row */}
-                        <div style = {{height: "330px"}}>
-                    <div style={{ textAlign: "center", width:"70%", height : "15%", margin:"auto"}}><h1 style={{color : "white", fontSize:"35px",fontFamily:'sans-serif',fontWeight:"bold"}}>Popuplar Movies And Shows</h1></div>
-                        <div style ={{ display:"flex", width :"70%",height:"60%",  margin :"auto",   position: "relative" }}>
+                        <div style = {{height: "360px"}}>
+                    <div style={{ textAlign: "center", width:"70%", height : "15%", margin:"auto"}}><h1 style={{color : "white", fontSize:"35px",fontFamily:'sans-serif',fontWeight:"bold",marginTop:"6%"}}>Popuplar Movies And Shows</h1></div>
+                        <div style ={{ display:"flex", width :"70%",height:"65%",  margin :"auto",   position: "relative",paddingTop:"3%" }}>
                             <div style = {{float : "left", margin : "auto" , width : "23%",  height : "80%"}}>
                                 <div style={{height:"80%"}}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkfpbU3oYImCkzJvHtpo9IxLPxwxPvQgWW1Q&usqp=CAU" alt = "img data" style={{height :"100%",width:"100%",borderRadius:"5px"}}></img></div>
                                 {/* <div style={{height:"20%"}}><h3 style = {{color:"white",fontFamily:'sans-serif'}}>this is second movie title</h3></div> */}

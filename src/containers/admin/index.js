@@ -2,8 +2,8 @@ import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-
-class AdminHomePage extends React.Component{
+import { Link } from 'react-router-dom';
+class Home extends React.Component{
     render(){
        return (
         <div>
@@ -31,7 +31,7 @@ class MainContent extends React.Component{
     render(){
        return (
         <div class="main-content">
-                <section class="section">
+                <section class="section adminNewSection">
                 <div class="row ">
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
@@ -743,4 +743,4 @@ class MainContent extends React.Component{
        );
     }
 }
-export default AdminHomePage;
+export default Home;

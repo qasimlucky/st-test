@@ -1,19 +1,22 @@
 import React from "react";
 class Navbar extends React.Component{
+   
     render(){
+        //window.location.reload(false);
        return (
-        <nav class="navbar navbar-expand-lg main-navbar sticky">
+        
+        <nav class="navbar navbar-expand-lg main-navbar sticky" style={{background:"white", paddingLeft:"30px"}}>
                 <div class="form-inline mr-auto">
-                <ul class="navbar-nav mr-3">
-                    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
-                                            collapse-btn"> <i data-feather="align-justify"></i></a></li>
-                    <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                <ul class="navbar-nav mr-3 nav-searchbar">
+                    {/* <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                                            collapse-btn"> <i data-feather="align-justify"></i></a></li> */}
+                    {/* <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                         <i data-feather="maximize"></i>
-                    </a></li>
+                    </a></li> */}
                     <li>
                     <form class="form-inline mr-auto">
                         <div class="search-element">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200"/>
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200" style={{border:"none !important"}}/>
                         <button class="btn" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
