@@ -62,12 +62,60 @@ function HomePopUp() {
   
          return (
           <>
+          {/* <div class="home-popup-s1-p1">
+                            <iframe src="https://www.youtube.com/watch?v=SxTYjptEzZs"></iframe>
+                        </div> */}
             <main class="home-popup web-bg-color">
                 <container class="home-popup-box">
                     <section class="home-popup-s1">
-                        <div class="home-popup-s1-p1">
-                            <iframe src="https://www.youtube.com/watch?v=SxTYjptEzZs"></iframe>
+                        
+                    <div class="player-container">
+                        <video class="video-selector" preload="auto" oncontextmenu="return false" data-pause="true" data-changing="false">
+                            <source src="http://localhost:7000/static/trailer_1668071025491.mp4" type="video/mp4"/>
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="player-controls">
+                            <div class="controls-background"></div>
+                            <div class="preview-area"><span>0:00</span><img src="" alt=""/></div>
+                            <div class="player-progressbar">
+                                <div class="range-container" >
+                                    <input type="range" step="any" min="0" max="100" value="0"/>
+                                    <div class="lower">
+                                        <div class="preview-progress"></div>
+                                        <div  class="loaded-progress"></div>
+                                        <div class="upper"></div>
+                                    </div>
+                                </div>
+                            </div>  
+                        
+                            <div class="lower-controls">
+                            <svg class="play-btn" height="40" width="40"><path d="M14.167 30.083V9.792l15.958 10.166Z"/></svg>
+                            <svg class="pause-btn hide-controls" viewBox="0 0 36 36" height="40" width="40"><path d="M 12,26 16,26 16,10 12,10 z M 21,26 25,26 25,10 21,10 z"></path></svg>
+                            <svg class="rwd" height="40" width="40"><path d="M33.083 27.708 21.708 20l11.375-7.708Zm-14.791 0L6.917 20l11.375-7.708Z"/></svg>
+                            <svg class="stop" viewBox="0 0 39 39" height="32" width="32"><path d="M12.167 27.833V12.167h15.666v15.666Z"/></svg>
+                            <svg class="fwd" height="40" width="40"><path d="M6.875 27.708V12.292L18.25 20Zm14.875 0V12.292L33.125 20Z"/></svg>
+                            <div class="digital-timer">
+                                    <span class="running-time">0:00</span>
+                                    / 
+                                    <span class="total-time">0:00</span>
+                                </div>
+                                
+                            <div class="fullscreen">
+                                    <span></span>
+                                    <svg viewBox="0 0 40 40" height="31" width="31" data-fullscreen="false"><path d="M7.583 32.417v-9.334h3.667v5.667h5.667v3.667Zm0-15.5V7.583h9.334v3.667H11.25v5.667Zm15.5 15.5V28.75h5.667v-5.667h3.667v9.334Zm5.667-15.5V11.25h-5.667V7.583h9.334v9.334Z"/></svg>
+                                    <svg class="hide-fullscreen" viewBox="0 0 40 40" height="32" width="32"><path d="M13.708 31.667v-5.375H8.333v-2.75h8.125v8.125ZM8.333 16.458v-2.75h5.375V8.333h2.75v8.125Zm15.209 15.209v-8.125h8.125v2.75h-5.375v5.375Zm0-15.209V8.333h2.75v5.375h5.375v2.75Z"/></svg>
+                            </div>
+                            <svg class="pic-in-pic-mode" viewBox="0 0 39 39" height="40" width="40"><path d="M16.792 28.5h15.041V18H16.792ZM6.125 33.333q-1.125 0-1.958-.833-.834-.833-.834-1.958V9.458q0-1.125.834-1.958.833-.833 1.958-.833h27.75q1.125 0 1.958.833.834.833.834 1.958v21.084q0 1.125-.834 1.958-.833.833-1.958.833Zm0-2.791h27.75V9.458H6.125v21.084Zm0 0V9.458v21.084Z"/></svg>
+                            <div class="volume">
+                                    <svg class="vol-100" height="25px" viewBox="0 0 23 23" width="25px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 9v6h4l5 5V4L7 9H3zm7-.17v6.34L7.83 13H5v-2h2.83L10 8.83zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"/></svg>
+                                    <svg class="vol-60" height="25" viewBox="0 0 23 23" width="25"><path d="M5 15V9h4l5-5v16l-5-5Zm11 1V7.95q1.125.525 1.812 1.625.688 1.1.688 2.425 0 1.325-.688 2.4Q17.125 15.475 16 16Zm-4-7.15L9.85 11H7v2h2.85L12 15.15ZM9.5 12Z"/></svg>
+                                    <svg class="vol-30" height="25" viewBox="0 0 23 23" width="25"><path d="M7 15V9h4l5-5v16l-5-5Zm2-2h2.85L14 15.15v-6.3L11.85 11H9Zm2.5-1Z"/></svg>
+                                    <svg class="vol-0" height="25" viewBox="0 0 23 23" width="25"><path d="m19.8 22.6-3.025-3.025q-.625.4-1.325.688-.7.287-1.45.462v-2.05q.35-.125.688-.25.337-.125.637-.3L12 14.8V20l-5-5H3V9h3.2L1.4 4.2l1.4-1.4 18.4 18.4Zm-.2-5.8-1.45-1.45q.425-.775.638-1.625.212-.85.212-1.75 0-2.35-1.375-4.2T14 5.275v-2.05q3.1.7 5.05 3.137Q21 8.8 21 11.975q0 1.325-.362 2.55-.363 1.225-1.038 2.275ZM9.1 11.9Zm7.15 1.55L14 11.2V7.95q1.175.55 1.838 1.65.662 1.1.662 2.4 0 .375-.062.738-.063.362-.188.712ZM12 9.2 9.4 6.6 12 4Zm-2 5.95V12.8L8.2 11H5v2h2.85Z"/></svg>
+                                    <input type="range" min="0" max="1" step="any" value="0.8"/>
+                            </div> 
+                            </div> 
                         </div>
+                    </div>    
                     </section>
 
                     <section class="home-popup-s2-row" >

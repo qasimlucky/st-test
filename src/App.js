@@ -1,6 +1,5 @@
 
 import { Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -21,7 +20,7 @@ import HomePage from './containers/website/home';
 import SignIn from './containers/website/sign-in';
 import SignUpOtp from './containers/website/signup-otp';
 import PricingPlan from './containers/website/pricing-plan';
-
+import HomePopUp from './containers/website/home-page-popup';
 
 
 
@@ -37,6 +36,8 @@ function App() {
                 <Route path="/test" exact element={<TestList/>}/>
                 <Route path="/signupotp" exact element={<SignUpOtp/>}/>
                 <Route path="/pricingplan" exact element={<PricingPlan/>}/>
+                <Route path="/popup" exact element={<HomePopUp/>}/>
+                
             </Routes> 
 
             <Routes>

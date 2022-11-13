@@ -1,6 +1,7 @@
 
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,Component } from 'react';
 import axios from "axios";
+import { useRef } from "react";
 
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
@@ -11,8 +12,10 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {data} from "../../mockData"
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { MdChevronLeft, MdChevronRight, MdLaptopWindows } from 'react-icons/md';
 import HomePopUp from './home-page-popup';
+
+
 
 const customStyles = {
     content: {
@@ -26,8 +29,39 @@ const customStyles = {
   };
 
 function HomePage() {
-   
-   
+
+    const videoRef = useRef(null);
+    const [playing, setPlaying] = useState(false);
+    const [videoTime, setVideoTime] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [progress, setProgress] = useState(0);
+    
+    const videoHandler = (control) => {
+        if (control === "play") {
+          videoRef.current.play();
+          setPlaying(true);
+          var vid = document.getElementById("video1");
+          setVideoTime(vid.duration);
+        } else if (control === "pause") {
+          videoRef.current.pause();
+          setPlaying(false);
+        }
+      };
+      
+      const fastForward = () => {
+        videoRef.current.currentTime += 5;
+      };
+    
+      const revert = () => {
+        videoRef.current.currentTime -= 5;
+      };
+
+      window.setInterval(function () {
+        setCurrentTime(videoRef.current?.currentTime);
+        setProgress((videoRef.current?.currentTime / videoTime) * 100);
+      }, 1000);
+      
+   //
     let subtitle;
     const [modalIsOpen, setIsOpen] = React.useState(false)
     const [isShown, setIsShown] = useState(true);
@@ -104,8 +138,10 @@ function HomePage() {
       };
 
       function openModal() {
+        /* window.location.reload(false); */
         setIsOpen(true);
         setIsShown(false)
+        
         
       }
     
@@ -133,9 +169,57 @@ function HomePage() {
         <main class="home-popup web-bg-color">
                 <container class="home-popup-box">
                     <section class="home-popup-s1">
-                        <div class="home-popup-s1-p1">
-                            <iframe src="https://www.youtube.com/watch?v=SxTYjptEzZs"></iframe>
+                    <div class="video-box">
+                        <video id="video1" ref={videoRef} className="video" src="/video.mp4"></video>
+                    </div>
+                    
+                    <div className="controlsContainer">
+
+                    <div class="center-box">
+                        {playing ? (
+                        <a onClick={() => videoHandler("pause")} class="center-video-btn">
+                            <img className="controlsIcon--small video-play-center" alt="" src="/pause.svg"/> 
+                        </a>
+
+                        ) : (
+                        <a onClick={() => videoHandler("play")} class="center-video-btn">
+                            <img className="controlsIcon--small video-play-center" alt="" src="/play.svg"/>
+                        </a>
+                        )}
+                    </div>
+
+                    <div className="controls">
+                        {/* <img onClick={revert} className="controlsIcon" alt="" src="/backward-5.svg"/> */}
+                        <div class="video-title"><h2>The Marshal King </h2></div>
+                    {playing ? (
+
+                        <a onClick={() => videoHandler("pause")} class="btn-trailer video-btn">
+                            <img className="controlsIcon--small video-play" alt="" src="/pause.svg"/> &nbsp; Resume 
+                        </a>
+                        
+                        ) : (
+                        <a onClick={() => videoHandler("play")} class="btn-trailer video-btn">
+                            <img className="controlsIcon--small video-play" alt="" src="/play.svg"/> &nbsp; Resume
+                        </a>
+                        )}
+                        <div class="video-btn-like-row">
+                            <div class="part2-1 btn-like-col"><a href=""><i class="fa-solid fa-heart"></i></a></div>
+                            <div class="part2-1 btn-like-col"><a href=""><i class="fa-solid fa-plus"></i></a></div>
                         </div>
+                        {/* <img onClick={fastForward} className="controlsIcon" alt="" src="/forward-5.svg"/> */}
+                    </div>
+                    </div>
+                    <div className="timecontrols">
+                    
+                        <div className="time_progressbarContainer">
+                            <div style={{ width: `${progress}%` }} className="time_progressBar"></div>
+                        </div>
+                        <div class="movie-time-control">
+                            <p className="controlsTime">{Math.floor(videoTime / 60) + ":" + ("0" + Math.floor(videoTime % 60)).slice(-2)}</p>
+                            &nbsp; &nbsp; <p> of </p> &nbsp; &nbsp;
+                            <p className="controlsTime">{Math.floor(currentTime / 60) + ":" + ("0" + Math.floor(currentTime % 60)).slice(-2)}</p>
+                        </div>
+                    </div>
                     </section>
 
                     <section class="home-popup-s2-row" >
@@ -364,10 +448,28 @@ function HomePage() {
                 </container>
             </main>
         
-      </Modal> 
+                    </Modal> 
       
       {isShown && (<Header/>)}
-    
+        {/* <video id="video1" ref={videoRef} className="video" src="http://localhost:7000/static/trailer_1668071025491.mp4"></video>
+         <div className="controlsContainer">
+        <div className="controls">
+            <img onClick={revert} className="controlsIcon" alt="" src="/backward-5.svg"/>
+          {playing ? (
+            <img onClick={() => videoHandler("pause")} className="controlsIcon--small" alt="" src="/pause.svg"/>
+            ) : (
+            <img onClick={() => videoHandler("play")} className="controlsIcon--small" alt="" src="/play.svg"/>
+            )}
+          <img onClick={fastForward} className="controlsIcon" alt="" src="/forward-5.svg"/>
+        </div>
+      </div>
+      <div className="timecontrols">
+      <p className="controlsTime">{Math.floor(videoTime / 60) + ":" + ("0" + Math.floor(videoTime % 60)).slice(-2)}</p>
+        <div className="time_progressbarContainer">
+          <div style={{ width: `${progress}%` }} className="time_progressBar"></div>
+        </div>
+        <p className="controlsTime">{Math.floor(currentTime / 60) + ":" + ("0" + Math.floor(currentTime % 60)).slice(-2)}</p>
+    </div> */}
     
     
     <div class="fullwidth-slider">
