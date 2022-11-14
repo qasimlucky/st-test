@@ -5147,10 +5147,10 @@ input {
     align-items: center;
     width: 50%;
     background-color: transparent;
-    margin-top: -21vw;
+    margin-top: -34vw;
     padding: 0 40px;
     z-index: 20;
-  }
+}
   
   .controls {
     display: flex;
@@ -5244,7 +5244,85 @@ input {
   .controlsTime {
     color: white;
   }
+/* AUDIO CONTROLS CSS STARTS  +++++++++++++++++ */
+.opacity{
+    opacity: 0.5;
+}
+.audio-control{
+    height: 35px;
+    display: inline-block;
+    width: 40%;
+    float: right;
+    position: relative;
+}
+.audio-play-center{
+    padding: 10px;
+}
+.audio-control-row {
+    position: relative;
+    display: inline-grid;
+    height: 130px;
+    display: inline-block;
+    width: 210%;
+    margin-bottom: 65px !important;
+    margin: auto;
+}
+.audio-control-row:hover .audio-bar.input-row{
+    display: flex;
+}
+.audio-control-col{
+    float: right;
+    position: relative;
+    margin: auto;
+    /* width: 15%; */
+}
+.audio-bar {
+    width: 100%;
+    float: right;
+    padding-top: 20px;
+}
+.audio-bar input{
+    display: block;
+    width: 15%;
+    float: right;
+    margin-right: 0;
 
+}
+.input-row{
+    display: flex;
+    position: relative;
+    width: 100%;
+    display: none;
+}
+/* input .input-col{
+    width: 15%;
+    float: right;
+    margin: auto;
+    margin-right: 0;
+} */
+/* p .input-col{
+    width: 10%;
+    margin: auto;
+    float: right;
+    margin-right: 0;
+    margin-left: 0;
+} */
+.input-row p{
+    color: whitesmoke;
+    margin-right: 0;
+    margin-left: 0;
+}
+.input-col{
+    float: right;
+    position: relative;
+    margin: auto;
+}
+.audio-btn-box.audio-control-col {
+    width: 100%;
+    text-align: right;
+    float: right;
+}
+/* AUDIO CONTROLS CSS ENDS  ======================= */
 
 /*  HOMEPAGE POPUP CSS ENDS =============================================================================== */
 

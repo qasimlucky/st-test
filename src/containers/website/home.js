@@ -1,5 +1,7 @@
 
 import React, { useState,useEffect,Component } from 'react';
+import { Player, ControlBar, VolumeMenuButton } from 'video-react';
+
 import axios from "axios";
 import { useRef } from "react";
 
@@ -31,22 +33,44 @@ const customStyles = {
 function HomePage() {
 
     const videoRef = useRef(null);
+    const progressBar = useRef();
     const [playing, setPlaying] = useState(false);
+    const [ismuted, setIsMuted] = useState(true);
     const [videoTime, setVideoTime] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
     const [progress, setProgress] = useState(0);
+    const [volume, setVolume] = useState(1)
+    const [muted, setMuted] = useState(false)
+    const finalVolume = muted ? 0 : volume ** 2
     
     const videoHandler = (control) => {
         if (control === "play") {
           videoRef.current.play();
+           console.log(videoRef.current.volume ) 
+           /* videoRef.current.volume = 0.02 */
+
           setPlaying(true);
           var vid = document.getElementById("video1");
           setVideoTime(vid.duration);
         } else if (control === "pause") {
           videoRef.current.pause();
+          /* videoRef.current.volume = 1 */
           setPlaying(false);
         }
       };
+
+       const  isMuted= () => {
+        setIsMuted(false)
+        videoRef.current.volume=0;
+ 
+      }; 
+      const  isMutedOff= () => {
+        setIsMuted(true)
+        videoRef.current.volume=0.5;
+        setVolume(0.5)
+ 
+      };
+      
       
       const fastForward = () => {
         videoRef.current.currentTime += 5;
@@ -169,13 +193,57 @@ function HomePage() {
         <main class="home-popup web-bg-color">
                 <container class="home-popup-box">
                     <section class="home-popup-s1">
+                    {/* video li width or heihgt 100% krni hai or baher wali div ki height adjust krni hai */}
                     <div class="video-box">
-                        <video id="video1" ref={videoRef} className="video" src="/video.mp4"></video>
+                        <video id="video1" ref={videoRef} className="video" src="/video.mp4" ></video>
                     </div>
                     
                     <div className="controlsContainer">
 
-                    <div class="center-box">
+                        <div class="audio-control audio-control-row">
+                            {/* <img className="video-play-center" alt="" src="/audioIcon.gif"/>  setMuted(m => !m) */}
+                            <div class="audio-btn-box audio-control-col opacity">
+                            {ismuted ? (
+
+                                
+                                <a   class="center-video-btn audio-play-center">
+                                    
+                                    <i className="fa fa-volume-up" style={{fontSize:"36px", color:"whitesmoke"}} onClick={() =>isMuted() }></i>
+                                </a>
+                                ) : (
+                                <a   class="center-video-btn audio-play-center">
+                                    <i className="fas fa-volume-mute" style={{fontSize:"36px", color:"whitesmoke"}} onClick={() =>isMutedOff() }></i>
+                                </a>
+                            
+                            )}
+                            </div>
+                            <div class="audio-control-col audio-bar input-row">
+                                <input  class="input-col"
+                                    type="range"
+                                    min={0}
+                                    max={1}
+                                    step={0.02}
+                                    value={volume}
+                                    onChange={event => {
+                                        setVolume(event.target.valueAsNumber)
+                                        const resetVolume =event.target.valueAsNumber/10;
+                                        /* console.log (typeof(resetVolume))
+                                        console.log (typeof(videoRef.current.volume)) */
+                                        videoRef.current.volume = resetVolume;
+                                        console.log(videoRef.current.volume)
+
+                                }}
+                                />
+                                {/* <button onClick={() => setMuted(m => !m)}>
+                                    {muted ? "muted" : "unmuted"}
+                                </button> */}
+                                <p class="input-col"> &nbsp;{(finalVolume.toFixed(1)*100)}</p>
+                            </div>
+
+                            
+                        </div>
+
+                    <div class="center-box opacity">
                         {playing ? (
                         <a onClick={() => videoHandler("pause")} class="center-video-btn">
                             <img className="controlsIcon--small video-play-center" alt="" src="/pause.svg"/> 
@@ -220,6 +288,23 @@ function HomePage() {
                             <p className="controlsTime">{Math.floor(currentTime / 60) + ":" + ("0" + Math.floor(currentTime % 60)).slice(-2)}</p>
                         </div>
                     </div>
+                     {/* // Volume Control Range slider */} 
+                    {/* <input
+                        type="range"
+                        defaultValue="0"
+                        className="mx-2 progressBarvolume bar volume"
+                    /> */}
+                    
+                        
+                    
+                     {/* <input
+                        type="range"
+                        className="progressBar bar"
+                        defaultValue="0"
+                        ref={progressBar}
+                        onChange={changeRange}
+                    /> */}                     
+                    
                     </section>
 
                     <section class="home-popup-s2-row" >
