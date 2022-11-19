@@ -96,7 +96,7 @@ function LandingPage() {
 
                         <div class="lndg-sec-3-p2-box">
                             <div class="lndg-sec-3-p2-img">
-                                <img src="web-assets/img/landing/Capture.png" alt = "img data"></img>
+                                <img src="https://wallpapercave.com/wp/wp2162756.jpg" alt = "img data"></img>
                             </div>
                             <div class="lndg-sec-3-p2-title">
                                 <h3>The Dark Knight</h3>
@@ -105,7 +105,7 @@ function LandingPage() {
 
                         <div class="lndg-sec-3-p2-box">
                             <div class="lndg-sec-3-p2-img">
-                                <img src="web-assets/img/landing/Capture2.png" alt = "img data"></img>
+                                <img src="https://wallpaperaccess.com/full/1077181.jpg" alt = "img data"></img>
                             </div>
                             <div class="lndg-sec-3-p2-title">
                                 <h3>The Defining Chapter</h3>
@@ -114,7 +114,7 @@ function LandingPage() {
 
                         <div class="lndg-sec-3-p2-box">
                             <div class="lndg-sec-3-p2-img">
-                                <img src="web-assets/img/landing/Capture3.png" alt = "img data"></img>
+                                <img src="https://p4.wallpaperbetter.com/wallpaper/491/821/139/movies-hollywood-movies-wallpaper-preview.jpg" alt = "img data"></img>
                             </div>
                             <div class="lndg-sec-3-p2-title">
                                 <h3>Seventh Son</h3>
@@ -123,7 +123,7 @@ function LandingPage() {
 
                         <div class="lndg-sec-3-p2-box">
                             <div class="lndg-sec-3-p2-img">
-                                <img src="web-assets/img/landing/Capture4.png" alt = "img data"></img>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkfpbU3oYImCkzJvHtpo9IxLPxwxPvQgWW1Q&usqp=CAU" alt = "img data"></img>
                             </div>
                             <div class="lndg-sec-3-p2-title">
                                 <h3>Dracula Untold</h3>
@@ -175,25 +175,25 @@ function LandingPage() {
 
                         <div class="lndg-sec-5-p2-box">
                             <div class="lndg-sec-5-p2-img">
-                                <img src="web-assets/img/landing/Capture5.png" alt = "img data"></img>
+                                <img src="https://wallpapercave.com/wp/wp2162756.jpg" alt = "img data"></img>
                             </div>
                         </div>
 
                         <div class="lndg-sec-5-p2-box">
                             <div class="lndg-sec-5-p2-img">
-                                <img src="web-assets/img/landing/Capture6.png" alt = "img data"></img>
+                                <img src="https://wallpaperaccess.com/full/1077181.jpg" alt = "img data"></img>
                             </div>
                         </div>
 
                         <div class="lndg-sec-5-p2-box">
                             <div class="lndg-sec-5-p2-img">
-                                <img src="web-assets/img/landing/Capture7.png" alt = "img data"></img>
+                                <img src="https://p4.wallpaperbetter.com/wallpaper/491/821/139/movies-hollywood-movies-wallpaper-preview.jpg" alt = "img data"></img>
                             </div>
                         </div>
 
                         <div class="lndg-sec-5-p2-box">
                             <div class="lndg-sec-5-p2-img">
-                                <img src="web-assets/img/landing/Capture8.png" alt = "img data"></img>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkfpbU3oYImCkzJvHtpo9IxLPxwxPvQgWW1Q&usqp=CAU" alt = "img data"></img>
                             </div>
                         </div>
 
