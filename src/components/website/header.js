@@ -36,16 +36,25 @@ function Header() {
                             <div class="header-right header-right-2 text-end">
                                 <ul class="z-index header-3rd-section">
                                     <li>
-                                        <select class="selectpicker bg-dark text-white small" data-width="fit">
-                                            <option class="rounded"  data-content='English'>English</option>
-                                            <option class="rounded"  data-content='Espanol'>Español</option>
+                                        {/* <select class="selectpicker" data-width="fit">
+                                            <option data-content='<span class="flag flag-us"></span> English'>English</option>
+                                            <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
+                                        </select> */}
+                                        {/* <form.Control as="select">
+                                            <option><span className="flag-icon flag-icon-gr"></span>Germany</option>
+                                            <option><span className="flag-icon flag-icon-gr"></span>English</option>
+                                        </form.Control> */}
+                                         <select class="language-menu selectpicker bg-dark text-white text-lg-center h5" data-width="fit">
+                                            <option class="rounded" style={{backgroundImage:`url("web-assets/img/banner-img/ship-img2.jpg")`}}  data-content='English'><div style={{backgroundImage:`url("web-assets/img/banner-img/ship-img2.jpg")`}}></div>English</option>
+                                            <option class="rounded"  data-thumbnail="web-assets/img/flags/italy.png" data-content='Espanol'>Español</option>
                                             <option class="rounded"  data-content='Italiano'>Italiano</option>
                                             <option class="rounded"  data-content='Dansk'>Dansk</option>
-                                        </select>
+                                        </select> 
                                     </li>
                                     <li><a href=""><i class="fa fa-search nav-icons"></i></a></li>
                                     <li><a href=""><i class="fa fa-bell-o nav-icons"></i></a></li>
 
+                                    {/* PROFILE SECTION STARTS ++++++++++++++++++++++++++++++++++++++++++++++++*/}
                                     <li class="profile-dp">
                                         <a href="">
                                             <img class="profile" src="https://static.xx.fbcdn.net/assets/?revision=816167972411634&name=desktop-creating-an-account-icon&density=1" alt="profile img"/>
@@ -53,12 +62,28 @@ function Header() {
 
                                         <div class="stv-profile-dropdown">
                                             <div class="stv-profile-dropdown-box">
-                                                <div class="stv-profile-dropdown-item"><a href="http://localhost:3000/userprofile">My Profile</a></div>
-                                                <div class="stv-profile-dropdown-item stv-pf-d-p1"><a href="http://localhost:3000/pricingplan"><i></i>Pricing Plan</a></div>
-                                                <div class="stv-profile-dropdown-item"><a href=""><i></i>Logout</a></div>
+                                                <div class="stv-profile-dropdown-item">
+                                                    <a class="stv-profile-row" href="http://localhost:3000/userprofile">
+                                                        <img class="stv-profile-col" src="web-assets/img/user-profile-icon.png"></img>
+                                                        <p class="stv-profile-col">My Profile</p>
+                                                    </a>
+                                                </div>
+                                                <div class="stv-profile-dropdown-item stv-pf-d-p1">
+                                                    <a class="stv-profile-row" href="http://localhost:3000/pricingplan">
+                                                        <img class="stv-profile-col" src="web-assets/img/settings.png"></img>
+                                                        <p class="stv-profile-col">Pricing Plan</p>
+                                                    </a>
+                                                </div>
+                                                <div class="stv-profile-dropdown-item">
+                                                    <a class="stv-profile-row" href="">
+                                                        <img class="stv-profile-col" src="web-assets/img/signout.png"></img>
+                                                        <p class="stv-profile-col">Logout</p>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
+                                    {/* PROFILE SECTION ENDS  =================================================*/}
 
                                 </ul>
                             </div>

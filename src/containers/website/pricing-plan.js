@@ -16,16 +16,21 @@ function PricingPlan() {
                                     <div class="stv-plan-col plan-p2-p1">
                                         {/* <h2><b>$19 </b>/ Per<br></br> month</h2> */}
                                     </div>
-                                    <div class="stv-plan-col plan-p2-p1 web-bg-color">
+                                    <div class="stv-plan-col plan-p2-p1" style={{backgroundImage:`url("web-assets/img/price-tag-hover.png")`}}>
+                                        {/* <img src="web-assets/img/price-tag.png"></img> */}
+                                        <p>Basic</p>
                                         <h2><b>$19 </b>/ Per<br></br> month</h2>
                                     </div>
-                                    <div class="stv-plan-col plan-p2-p1 bg-pink">
+                                    <div class="stv-plan-col plan-p2-p1" style={{backgroundImage:`url("web-assets/img/price-tag.png")`}}>
+                                        <p class="pink">Standard</p>
                                         <h2><b>$19 </b>/ Per<br></br> month</h2>
                                     </div>
-                                    <div class="stv-plan-col plan-p2-p1 web-bg-color">
+                                    <div class="stv-plan-col plan-p2-p1" style={{backgroundImage:`url("web-assets/img/price-tag-hover.png")`}}>
+                                        <p>Platinum</p>
                                         <h2><b>$19 </b>/ Per<br></br> month</h2>
                                     </div>
-                                    <div class="stv-plan-col plan-p2-p1 web-bg-color">
+                                    <div class="stv-plan-col plan-p2-p1" style={{backgroundImage:`url("web-assets/img/price-tag-hover.png")`}}>
+                                        <p>Premium</p>
                                         <h2><b>$19 </b>/ Per<br></br> month</h2>
                                     </div>
                                 </div>
@@ -72,11 +77,11 @@ function PricingPlan() {
                                     <div class="plan-p3-col"><i class="fa fa-check"></i></div>
                                 </div>
                                 <div class="plan-p3-row p3-last-row">
-                                    <div class="plan-p3-col"><i class="fa fa-check"></i></div>
-                                    <div class="plan-p3-col"><a>Purchase</a></div>
-                                    <div class="plan-p3-col"><a>Purchase</a></div>
-                                    <div class="plan-p3-col"><a>Purchase</a></div>
-                                    <div class="plan-p3-col"><a>Purchase</a></div>
+                                    <div class="plan-p3-col"><i class="fa fa-times"></i></div>
+                                    <div class="plan-p3-col"><a class="purchase">Purchase</a></div>
+                                    <div class="plan-p3-col"><a class="purchase">Purchase</a></div>
+                                    <div class="plan-p3-col"><a class="purchase">Purchase</a></div>
+                                    <div class="plan-p3-col"><a class="purchase">Purchase</a></div>
                                 </div>
 
 

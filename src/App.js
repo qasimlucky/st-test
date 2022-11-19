@@ -21,6 +21,7 @@ import SignIn from './containers/website/sign-in';
 import SignUpOtp from './containers/website/signup-otp';
 import PricingPlan from './containers/website/pricing-plan';
 import HomePopUp from './containers/website/home-page-popup';
+import MoviePlayer from './containers/website/movie-player';
 
 
 
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/signupotp" exact element={<SignUpOtp/>}/>
                 <Route path="/pricingplan" exact element={<PricingPlan/>}/>
                 <Route path="/popup" exact element={<HomePopUp/>}/>
+                <Route path="/player" exact element={<MoviePlayer/>}/>
                 
             </Routes> 
 

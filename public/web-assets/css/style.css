@@ -108,8 +108,25 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
 /* 02. Header CSS */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap');
+
+/* HALVATICA FONT FAMILY ========------------======== */
+
+  /* @import url('https://fonts.cdnfonts.com/css/helvetica-neue-lt-std-55'); */
+  
+                            /* @import url('https://fonts.cdnfonts.com/css/helvetica-2'); */
+
+                
+
+  .web-assets-body{
+    /* font-family: 'Helvetica Neue LT Std', poppins; */
+    /* font-family: 'Helvetica', poppins; */
+
+                                                
+  }
+                
+
 .p{
-    font-family: sans-serif !important;
+    font-family: poppins !important;
 }
 
 
@@ -125,8 +142,6 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
     width : 30%;
     margin : auto;
     height: 500px;
-    border: solid red 3px;
-
 }
 .sign-img { 
     height: 700px;
@@ -244,7 +259,7 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
 }
 .watch-trailer{
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: poppins;
     padding: 2%;
     padding-right: 5%;
     display: none;
@@ -286,7 +301,7 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
         .modal-content ul li{
             padding: 10px 0;
             font-size: 15px;
-            font-family: sans-serif;
+            font-family: poppins;
             }
         .modal-content ul li a{
             text-decoration: none;
@@ -332,17 +347,17 @@ WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SA
 .section{
     background-color: #0d0d31;
     /* padding: 2% 0; */
-    font-family: "Open Sans", sans-serif !important;
+    font-family: "Open Sans", poppins !important;
 }
 .owl-carousel .owl-item img{
     width: 100%;
 }
 .slider-row-heading h4{
-    font-family: sans-serif !important;
+    font-family: poppins !important;
     color: whitesmoke;
 }
 .slider-row-heading h4 a{
-    font-family: sans-serif !important;
+    font-family: poppins !important;
     color: #d51c58;
 }
 .fullwidth-slider .carousel-indicators li {
@@ -578,7 +593,7 @@ i{
     width: 87%;
     height: 100%;
     margin: auto;
-    font-family: sans-serif;
+    font-family: poppins;
 }
 .overlay-parts{
     float: left;
@@ -588,7 +603,7 @@ i{
 }
 .overlay-part1 h4{
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: poppins;
     color: whitesmoke;
     line-height: initial;
     margin: 0;
@@ -636,11 +651,11 @@ i{
     width: 100%;
     padding: 0;
 }
-.container-footer{
-    width: 75%;
+.container-footer {
+    width: 69%;
     position: relative;
     margin: auto;
-    padding: 4% 0;
+    padding: 55px 0;
 }
 .row.footer-row{
     display: flex;
@@ -652,28 +667,28 @@ i{
     margin: 0%;
     position: relative;
 }
-.footer-widget-title{
-    font-family: sans-serif;
+.footer-widget-title {
+    font-family: poppins;
     color: whitesmoke;
-    font-size: larger;
+    font-size: initial;
+    font-weight: bold;
 }
 .widget-link{
-    font-family: sans-serif;
+    font-family: poppins;
     list-style: none;
     padding: 0;
     padding-top: 4%;
 }
-.widget-link li{
-    padding: 1% 0;
-    font-size: small;
+.widget-link li {
+    font-size: larger;
+    line-height: 22px;
 }
 .widget-link li a{
     color: #9b9bbf;
 }
-.section-end{
-    width: 100%;
+.section-end {
     background-color: #0d0d31;
-    padding: 1.5%;
+    padding: 26px;
 }
 .copyright-wrapper{
     width: 79%;
@@ -688,6 +703,9 @@ i{
     float: left;
     margin: auto;
     text-align: left;
+}
+.copyright-text p{
+	font-size:smaller;
 }
 .text-two{
     text-align: right;
@@ -1341,10 +1359,11 @@ li.header--social a:hover i {
 
 
 /* header slider */
+
+
 .fullwidth-slider {
-    height: 100vh;
-    /* margin-top: 627px; */
-  }
+    height: 81vh;
+}
   .fullwidth-slider .carousel,
   .fullwidth-slider .item,
   .fullwidth-slider .active {
@@ -1369,7 +1388,6 @@ li.header--social a:hover i {
 
   } */
   /* .third-col .slider-content{
-    border: 3px solid red;
   } */
   .title.title.section-3rd-title{
     padding-top: 15% !important;
@@ -1394,14 +1412,14 @@ li.header--social a:hover i {
   .fullwidth-slider .carousel-inner .fill .slider-content {
     padding-left: 25px;
     animation-delay: 1s;
-    font-family: sans-serif;
+    font-family: poppins;
   }
   .fullwidth-slider .carousel-inner .fill .slider-content .title {
     font-size: 60px;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
-    font-family: sans-serif;
+    font-family: poppins;
     padding-top: 58px;
     line-height: 65px;
     max-width: 780px;
@@ -1468,16 +1486,17 @@ li.header--social a:hover i {
     padding-right:5px;
   }
   .btn-trailer{
-    padding: 8px 15px;
+    padding: 5px 15px;
     background-color: #d51c58;
     border-radius: 20px;
     color: whitesmoke !important;
     text-transform: capitalize !important;
     font-size: 13px !important;
-    font-family: "Open Sans", sans-serif !important;
+    font-weight: bold;
+    font-family: "Open Sans", poppins !important;
   }
   .btn-detail{
-    padding: 8px 15px;
+    padding: 5px 15px;
     border-radius: 20px;
     font-size: 13px !important;
     border: 2px solid #d51c58;
@@ -1707,7 +1726,7 @@ nav.black > ul > li > a{
 \*------------------------------------*/
 /* body {
     color: #696969;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", poppins;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
@@ -2312,7 +2331,7 @@ select.form-control {
 [data-overlay-color="primary"]:before { background-color: #d51c58; }
 
 /* 2.8. FONTS */
-.ff--default { font-family: "Open Sans", sans-serif; }
+.ff--default { font-family: "Open Sans", poppins; }
 .ff--primary { font-family: "Playfair Display", serif; }
 
 .fs--12 { font-size: 12px; line-height: 22px; }
@@ -3897,7 +3916,7 @@ text-align: center;
 flex-direction: column;
 }
 .product_category_heading h3 {
-font-family: 'Poppins', sans-serif;
+font-family: 'Poppins', poppins;
 font-style: normal;
 font-weight: 700;
 font-size: 28px;
@@ -3945,7 +3964,6 @@ border: 1px solid green;
 display: flex;
 width: 185px;
 height: 105px;
-border: 1px solid red;
 align-items: center;
 flex-direction: column;
 }
@@ -4024,6 +4042,59 @@ border-radius: 2px;
 
 
 } */
+/* HOME PAGE CSS STARTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* GRADIENT CSS STARTS ++++++++++++++++++++++++++++++++*/
+.lagja {
+    width: 100%;
+    height: 30px !important;
+    /* box-shadow: 0rem -1rem 3rem 2rem #0d0d31; */
+    contain: layout !important;
+    box-shadow: 0rem -12px 37px 22px #0d0d31;
+    background-color: #0d0d;
+    color: yellow;
+}
+/* GRADIENT CSS ENDS ==================================*/
+.first-hm-heading{
+    padding-top: 17px;
+}
+
+
+
+
+.stv-hm-rs-main{
+    background-color: #0d0d31;
+}
+.stv-hm-rs-box1 {
+    background-color: #0d0d31;
+    color: whitesmoke;
+    padding: 10px 35px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.stv-hm-rs-box1 a{
+    color: #d51c58 !important;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.stv-hm-rs-box2{
+    background-color: #0d0d31;
+}
+.stv-hm-rs-box2-p1{}
+.stv-hm-rs-box2-p2{
+    padding:  0;
+}
+.stv-hm-rs-box2-p2-box{
+    width: 200px;
+}
+.stv-hm-rs-box2-p3{}
+
+
+
+
+
+
+
 
 
 a{
@@ -4059,7 +4130,7 @@ position: relative;
 width: 87%;
 height: 100%;
 margin: auto;
-font-family: sans-serif;
+font-family: poppins;
 }
 .overlay-parts{
 float: left;
@@ -4070,7 +4141,7 @@ width: 50%;
 .overlay-part1 h4{
 font-size: 17px;
 font-weight: bold;
-font-family: sans-serif;
+font-family: poppins;
 color: whitesmoke;
 line-height: initial;
 margin: 8px 0;
@@ -4190,21 +4261,22 @@ a:hover{
   }
 
 
-  /* header new css +++++++++++++++++++*/
-
+/* header new css +++++++++++++++++++++*/
 .align-items-center {
     align-items: flex-start !important;
 }
+/* header new css =====================*/
+
+/* HOME PAGE CSS ENDS =============================================================== */
 
 
 
+/* LANDING PAGE CSS STARTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/* LANDING PAGE CSS STARTS +++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* BUTTONS, COLORS, BG-COLORS AND FONT FAMILY CLASSES ++++++++++++++++++++++++*/
+/* BUTTONS, COLORS, BG-COLORS AND FONT FAMILY MY CLASSES ++++++++++++++++*/
 
 .font-family-sans{
-    font-family: sans-serif !important;
+    font-family: poppins !important;
 }
 .web-bg-color{
     background-color: #0d0d31 !important;
@@ -4230,10 +4302,8 @@ a:hover{
 .bd-pink{
     border: 2px solid #d51c58;
 }
-/* BUTTONS, COLORS, BG-COLORS AND FONT FAMILY CLASSES -----------------------------*/
+/* BUTTONS, COLORS, BG-COLORS AND FONT FAMILY MY CLASSES -----------------------------*/
 
-
-/* LANDING PAGE CSS ENDS  =============================================================== */
 
 .stv-land-slider-body {
 
@@ -4242,16 +4312,16 @@ a:hover{
     justify-content: center;
     overflow-x: hidden;
     height: 100%;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Urbanist', poppins;
 }
 label img {
-    width: 18rem;
+    width: 19rem;
     height: 24rem;
     border-radius: 3px;
 }
 .stv-land-label{
-    width: 18rem;
-    height: 24rem;
+    width: 16rem;
+    height: 21rem;
 }
 
 a{
@@ -4276,19 +4346,17 @@ input {
     align-items: center;
     flex-direction: column;
 }
-
 .cards {
     position: relative;
     height: 24rem;
-    width: 18rem;
+    width: 19rem;
     margin-bottom: 20px;
     perspective: 1000px;
     transform-style: preserve-3d;
 }
 .cards label {
-
     position: absolute;
-    width: 18rem;
+    width: 19rem;
     height: 100%;
     left: 0;
     right: 0;
@@ -4357,28 +4425,33 @@ input {
 
 /* LANDING PAGE SWIPER SLIDER ENDS ================================================================*/
 
+/* LANDING SECTION 1ST CSS STARTS  +++++++++++++++++++++++++++++*/
 .landing-main {
     background-color: #0d0d31;
     width: 100%;
-    height: 575px;
+    height: 455px;
     padding: 10px;
-    box-shadow: inset 0rem 0rem 27rem 20rem #1d1d41;
+    box-shadow: inset 0rem 0rem 25rem 19rem #1d1d41;
 }
-.landing-container-row{
+.landing-container-row {
     display: flex;
-    width: 85%;
+    width: 82%;
     height: 100%;
     position: relative;
     margin: auto;
 }
 .landing-container-col{
-    width: 50%;
+    /* width: 50%; */
     float: left;
     position: relative;
     margin: auto;
 }
+.land-container-col1{
+    width: 58%;
+}
 .stv-land-slider-main{
     height: 100%;
+    width: 42%;
 }
 .stv-land-slider{
     height: 100%;
@@ -4386,7 +4459,7 @@ input {
 }
 .sm-heading h3{
     font-size: xx-large;
-    font-family: sans-serif;
+    font-family: poppins;
     font-weight: bolder;
     color: whitesmoke;
     padding: 16px 0;
@@ -4406,67 +4479,215 @@ input {
     top: 6%;
     position: absolute;
   }
-.landing-sec-2{
-    box-shadow: 0rem -4rem 6rem 3rem #0d0d31;
-    padding: 9% 0;
+/* LANDING SECTION 1ST CSS ENDS  ===============================*/
+
+/* LANDING SECTION 2ND CSS STARTS  +++++++++++++++++++++++++++++*/
+
+.landing-sec-2 {
+    box-shadow: 0rem -2rem 4rem 2rem #0d0d31;
+    padding: 2% 0;
     width: 100%;
-    height: 670px;
-  }
-.landing-sec-2-row{
+    height: 420px;
+}
+.landing-sec-2-row {
     display: flex;
     position: relative;
     margin: auto;
-    width: 73%;
+    width: 75%;
     height: 100%;
 }
-.stv-land-col{
+.stv-land-col {
     float: left;
     position: relative;
     margin: auto;
-    width: 50%;
 }
-.sec-2-img-container{
-    box-shadow: inset 0px 0px 130px 115px #0d0d31;
+.sec-2-img-container {
+    width: 45%;
     height: 100%;
-  }
-/* .sec-2-img{
-    box-shadow: inset, 0px, 0px, 70px, 70px, #0d0d;
-    width: 100%;
-    height: 100%;
-} */
-.sec-2-content{
-    padding: 0 2%;
 }
-.sec-2-content h1{
+.sec-2-img {
+    height: 100%;
+    width: 80%;
+    background-size: cover;
+    box-shadow: inset 0px 0px 15rem -5rem #0d0d37;
+    margin: auto;
+}
+.sec-2-content {
+    width: 55%;
+}
+.sec-2-content h1 {
     color: whitesmoke;
-    font-family: sans-serif;
-    font-size: xx-large;
+    font-family: poppins;
+    font-size: 35px;
+    font-weight: bold;
+    padding-right: 33px;
+    line-height: 50px;
+}
+.sec-2-content p {
+    color: whitesmoke;
+    font-family: poppins;
+    font-size: large;
+    padding-top: 15px;
+    letter-spacing: 1px;
+}
+/* LANDING SECTION 2ND CSS ENDS  ===============================*/
+
+/* LANDING SECTION 3RD CSS STARTS  +++++++++++++++++++++++++++++*/
+
+.lndg-sec-3-main {
+    height: 547px;
+    padding: 2% 0 0;
+}
+.lndg-sec-3-p1 {
+    width: 80%;
+    height: 20%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 7px;
+    margin-top: 17px;
+}
+.lndg-sec-3-p1 h1 {
+    color: whitesmoke;
+    font-size: 50px;
+    font-family: poppins;
     font-weight: bold;
 }
-.sec-2-content p{
+.lndg-sec-3-p2 {
+    width: 80%;
+    height: 45%;
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+.lndg-sec-3-p2-box {
+    width: 24%;
+    height: 95%;
+    float: left;
+    margin: auto;
+}
+.lndg-sec-3-p2-img{
+    height: 80%;
+}
+.lndg-sec-3-p2-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.lndg-sec-3-p2-title{
+    height: 20%;
+    padding: 10px 0;
+}
+.lndg-sec-3-p2-title h3{
     color: whitesmoke;
-    font-family: sans-serif;
-    font-size: medium;
-    padding-top: 15px;
+    font-size: small;
+    font-family: poppins;
+    font-weight: bold;
+}
+.lndg-sec-3-p3 {
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    padding-top: 30px;
+}
+.lndg-sec-3-p3-box {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.lndg-sec-3-p3-box button {
+    color: whitesmoke;
+    background-color: #d51c58;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: poppins;
+    border-radius: 30px;
+    padding: 9px 55px;
+}
+.lndg-sec-3-p3-box p {
+    color: whitesmoke;
+    font-size: small;
+    font-family: poppins;
+    padding-top: 30px;
+}
+/* LANDING SECTION 3RD CSS ENDS  ===============================*/
+
+/* LANDING SECTION 4th CSS STARTS  +++++++++++++++++++++++++++++*/
+.sec-4th-img {
+    height: 100%;
+    width: 80%;
+    background-size: contain !important;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 0px 15rem -5rem #0d0d37;
+    margin: auto;
+}
+.sec-4th-content {
+    width: 55%;
+    padding-left: 90px;
+}
+/* LANDING SECTION 4th CSS ENDS  ===============================*/
+
+/* LANDING SECTION 5th CSS STARTS  +++++++++++++++++++++++++++++*/
+
+.lndg-sec-5-main {
+    height: 285px;
+    margin-bottom: 30px;
+}
+.lndg-sec-5-p1 {
+    width: 70%;
+    height: 15%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.lndg-sec-5-p1 h1 {
+    color: whitesmoke;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: poppins;
+    margin-top: 6%;
+}
+.lndg-sec-5-p2 {
+    width: 63%;
+    height: 58%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-top: 35px;
+}
+.lndg-sec-5-p2-box {
+    width: 22%;
+    height: 93%;
+    float: left;
+    margin: auto;
+    position: relative;
+}
+.lndg-sec-5-p2-img{
+    height: 80%;
+}
+.lndg-sec-5-p2-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
 }
 
 
+/* LANDING SECTION 5TH CSS ENDS  ===============================*/
 
-
-
-
-
-
+/* LANDING PAGE CSS ENDS  ================================================================================= */
 
 /* PROFILE PAGE CSS STARTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+.content-user-profile{
+    margin-bottom: 9px !important;
+}
 .stv-profile-p1{
     margin-top: 0 !important;
 }
-.stv-profile-dropdown{
+.stv-profile-dropdown {
     width: 175px;
-    height: 110px;
-    background-color:#191722;
+    height: 100px;
+    background-color: #191722;
     right: 0px;
     top: 42px;
     position: absolute;
@@ -4481,19 +4702,37 @@ input {
     height: 98%;
     margin: auto;
 }
-.stv-profile-dropdown-item{
+.stv-profile-dropdown-item {
     width: 100%;
-    padding: 3px 0;
+    padding: 0;
+    height: 33%;
     text-align: left;
 }
-.stv-profile-dropdown-item a{
+.stv-profile-dropdown-item p{
     color: whitesmoke;
     font-size: small;
     padding: 3px;
 }
-.stv-profile-dropdown-item i{
-    color: #d51c58;
+.stv-profile-row{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.stv-profile-col{
+    float: left;
+    position: relative;
+    margin: auto;
+}
+.stv-profile-dropdown-item img {
+    width: 11%;
+    height: 16px;
+}
+.stv-profile-dropdown-item p {
+    color: whitesmoke;
+    font-size: small;
     padding: 3px;
+    width: 82%;
 }
 .stv-pf-d-p1{
     border-top: 1px solid whitesmoke;
@@ -4508,7 +4747,7 @@ input {
     background-color: #0d0d31;
 }
 .stv-plan-box{
-    width: 65%;
+    width: 66%;
     margin: auto;
     padding: 20px 0;
     padding-bottom: 50px;
@@ -4520,18 +4759,19 @@ input {
 }
 .stv-plan-p1 h2{
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: poppins;
     font-size: medium;
     font-weight: bold;
 }
 .stv-plan-p2{
     width: 100%;
     margin: auto;
-    background-color: #1d1d41;
+    background-color: #0D0D3F;
     padding: 20px 0;
 }
 .stv-plan-p2-box{
-    width: 100%;
+    width: 97%;
+    margin: auto;
 }
 .stv-plan-row{
     width: 100%;
@@ -4539,25 +4779,36 @@ input {
     margin: auto;
     position: relative;
 }
-.stv-plan-col{
-    width: 18%;
-    height: 100px;
+.stv-plan-col {
+    width: 19%;
+    height: 118px;
     position: relative;
     float: left;
     margin: auto;
 }
-.stv-plan-col h2{
-    color: whitesmoke;
-    font-family: sans-serif;
-    text-align: center;
-    padding: 20% 0;
+.plan-p2-p1{
+    background-size: cover;
 }
-.plan-p3-row{
+.plan-p2-p1 p {
+    color: whitesmoke;
+    font-size: small;
+    text-align: center;
+    margin: auto;
+    padding-top: 7px;
+    font-weight: 500;
+}
+.plan-p2-p1 h2 {
+    color: whitesmoke;
+    font-family: poppins;
+    text-align: center;
+    padding: 11% 0;
+}
+.plan-p3-row {
     width: 97%;
     display: flex;
     position: relative;
     margin: auto;
-    padding: 12px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #0d0d31;
 }
 .plan-p3-col{
@@ -4567,11 +4818,14 @@ input {
     margin: auto;
     text-align: center;
 }
+.plan-p3-col .purchase{
+    color: whitesmoke !important;
+}
 .plan-p3-col h3{
     color: whitesmoke;
     font-size: small;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: poppins;
     text-align: center;
 }
 .plan-p3-col i{
@@ -4582,11 +4836,11 @@ input {
 .plan-p3-col h4{
     color: whitesmoke;
     font-size: larger;
-    font-family: sans-serif;
+    font-family: poppins;
     text-align: center;
 }
-.plan-p3-col a{
-    padding: 6px 20px;
+.plan-p3-col a {
+    padding: 10px 29px;
     border-radius: 20px;
     background-color: #d51c58;
     color: whitesmoke;
@@ -4613,7 +4867,7 @@ input {
 .home-popup{
     width: 100%;
     margin: auto;
-    font-family: sans-serif;
+    font-family: poppins;
     overflow: hidden;
 }
 .home-popup-box{
@@ -4761,7 +5015,7 @@ input {
 }
 .add-favrt .favourite h5{
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: poppins;
 }
 .popup-s2-rait-row-content{
     width: 98%;
@@ -4769,7 +5023,7 @@ input {
 }
 .popup-s2-rait-row-content h5{
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: poppins;
     line-height: 22px;
 }
 .home-popup-s2-p3 p{
@@ -4805,7 +5059,7 @@ input {
 }
 .show-arrow{
     height: 115px;
-    width: 50px;
+    width: 30px;
 }
 
 
@@ -4964,7 +5218,7 @@ input {
 .lower-controls .digital-timer,
 .lower-controls .fullscreen,
 .lower-controls .volume{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', poppins;
     font-weight: 300;
     fill: var(--controls-color);
     color: var(--controls-color);
@@ -5092,7 +5346,7 @@ input {
 .player-controls .preview-area span{
     position: absolute;
     bottom: -27px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', poppins;
     font-size: 14px;
     font-weight: 500;
     color: white;
@@ -5172,7 +5426,7 @@ input {
   .video-title h2{
     color: whitesmoke;
     font-size: xx-large;
-    font-family: sans-serif;
+    font-family: poppins;
   }
   .video-btn{
     display: flex;
