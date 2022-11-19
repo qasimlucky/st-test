@@ -3,7 +3,6 @@ import React, { useState,useEffect,Component } from 'react';
 import axios from "axios";
 import { useRef } from "react";
 import Modal from 'react-modal';
-
 import Header from "../../components/website/header";
 import WebFooter from "../../components/website/footer"; 
 import 'owl.carousel/dist/assets/owl.carousel.css';
