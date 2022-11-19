@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import "bootstrap/dist/css/bootstrap.css";
+/* import "bootstrap/dist/css/bootstrap.css"; */
 
 
 // admin pages
