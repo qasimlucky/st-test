@@ -250,7 +250,7 @@ function HomePage() {
 
                     <div className="controls">
                         {/* <img onClick={revert} className="controlsIcon" alt="" src="/backward-5.svg"/> */}
-                        <div class="video-title"><h2>The Marshal King </h2></div>
+                        <div class="video-title"><h2>THE MARSHAL KING </h2></div>
                     {playing ? (
 
                         <a onClick={() => videoHandler("pause")} class="btn-trailer video-btn">
@@ -357,7 +357,7 @@ function HomePage() {
                     <section class="box-shadow-top">
                         
                             <div>
-                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>More Like This  </div>
                             <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
                             <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft2} size={40} /></span>
                             <div
@@ -398,7 +398,7 @@ function HomePage() {
                             </div> 
                             </div> 
                             <div>
-                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>Favourites  </div>
                             <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
                             <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft6} size={40} /></span>
                             <div
@@ -439,7 +439,7 @@ function HomePage() {
                             </div> 
                             </div> 
                             <div>
-                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>Suggested For You  </div>
                             <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
                             <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft5} size={40} /></span>
                             <div
@@ -480,7 +480,7 @@ function HomePage() {
                             </div> 
                             </div> 
                             <div>
-                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>TV Thrillers  <a style={{color:"#d51c58"}}>see all</a></div>
+                            <div style={{ backgroundColor:"#0d0d31", color:"white", padding:"8px 52px 0",fontSize:"18px", fontWeight:"bold"}}>Upcoming Movies  </div>
                             <div className='relative flex items-center' style={{ backgroundColor:"#0d0d31"}} >
                             <span class="show-arrow"><MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 hover-css  text-[#FFFFFF]' onClick={slideLeft4} size={40} /></span>
                             <div
@@ -526,7 +526,8 @@ function HomePage() {
             </main>
         
                     </Modal> 
-      
+<main class="web-bg-color">
+
       {isShown && (<Header/>)}
         {/* <video id="video1" ref={videoRef} className="video" src="http://localhost:7000/static/trailer_1668071025491.mp4"></video>
          <div className="controlsContainer">
@@ -659,7 +660,7 @@ function HomePage() {
         <div class="stv-hm-rs-main">
             
             <div class="stv-hm-rs-box1 first-hm-heading" >
-                TV Thrillers   
+                Trending     
                 <a>see all</a>
             </div>
             <div className='stv-hm-rs-box2 relative flex items-center'  >
@@ -756,7 +757,7 @@ function HomePage() {
          {/* SLIDER LIST TWO 2 STARTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
         <div class="stv-hm-rs-main">
             <div class="stv-hm-rs-box1" >
-                TV Thrillers  
+                Your Fovourites    
                 <a>see all</a>
             </div>
             <div className='stv-hm-rs-box2 relative flex items-center'  >
@@ -806,7 +807,7 @@ function HomePage() {
         {/* SLIDER LIST THREE 3 STARTS +++++++++++++++++++++++++++++++++++++++++++++++++++++*/} 
         <div class="stv-hm-rs-main">
             <div class="stv-hm-rs-box1" >
-                TV Thrillers  
+                Featured Movies to Watch Now
                 <a>see all</a>
             </div>
             <div className='stv-hm-rs-box2 relative flex items-center'  >
@@ -857,7 +858,7 @@ function HomePage() {
         {/* SLIDER LIST FOUR 4 STARTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
         <div class="stv-hm-rs-main">
             <div class="stv-hm-rs-box1" >
-                TV Thrillers  
+                Upcoming Movies    
                 <a>see all</a>
             </div>
             <div className='stv-hm-rs-box2 relative flex items-center'  >
@@ -1079,7 +1080,7 @@ function HomePage() {
         </div > */}
 
         {/* SLIDER LIST FIVE 5 STARTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/}
-        <div class="stv-hm-rs-main">
+        <div class="stv-hm-rs-main stv-hm-rs-last">
             <div class="stv-hm-rs-box1" >
                 TV Thrillers  
                 <a>see all</a>
@@ -1126,12 +1127,12 @@ function HomePage() {
                     <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 hover-css text-[#FFFFFF] ' onClick={slideRight3} size={40}  />
                 </span>
             </div> 
+           
         </div> 
         {/* SLIDER LIST FIVE 5 ENDS =============================================================*/}    
-            
-       
-       
-      {isShown && (<WebFooter/>)}   
+        {isShown && (<WebFooter/>)}   
+</main>
+           
                   </>
         
          );
